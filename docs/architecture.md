@@ -47,10 +47,12 @@ This system imports job feeds from multiple external APIs on a schedule, process
                             v
                 [Next.js Frontend (Vercel)]
 
+```
+
 ![Architecture Diagram](./workflow-diagram.svg)
 
-
 ## 🛠 Design Decisions
+
 - **Cloud Run** for API server and worker: scales automatically, fully managed, no need to manage VMs.
 - **Cloud Run Jobs + Cloud Scheduler**: perfect for scheduled tasks; avoids always-on worker costs.
 - **Redis with BullMQ**: robust queuing solution, supports scaling multiple workers.
@@ -58,18 +60,28 @@ This system imports job feeds from multiple external APIs on a schedule, process
 - **Next.js App Router on Vercel**: modern frontend stack with server components, optimized for React 19.
 - **Socket.IO**: enables real-time UI updates on job status and import progress.
 - **GitHub + Cloud Build**: automatic build & deploy pipeline for API server.
+
 ## 📈 Scalability & Flexibility
+
 - Adding new feeds: extend fetcher config to include new API URLs.
 - Scaling workers: run multiple Cloud Run Job executions or add more queue workers.
 - Resilience: Redis queue decouples fetcher from worker, reducing impact of API failures.
 - Flexibility: frontend and backend are independently deployable; environment variables configure connections.
+
 ## 🚀 Deployment & Automation
+
 - Frontend is deployed on Vercel with automatic rebuilds on GitHub pushes.
 - Backend uses Cloud Build to build images on every commit to `/server`, with continuous deployment to Cloud Run.
 - Worker runs as a Cloud Run Job, scheduled with Cloud Scheduler directly through the Cloud Run console for fully automated periodic executions.
+
 ## ✅ Summary
+
 This architecture ensures:
+
 - Minimal operational overhead with serverless services.
 - Flexible, scalable, and maintainable design.
 - Clear separation of concerns between frontend, API, and worker processes.
+
+```
+
 ```
