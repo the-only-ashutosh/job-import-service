@@ -8,12 +8,11 @@ export function getUpcomingHour() {
       hour: "2-digit",
       minute: "2-digit",
       second: "2-digit",
+      timeZone: "Asia/Kolkata",
     });
   };
 
-  const currentFormatted = formatTime(
-    new Date(now.getMilliseconds() + 19800000)
-  );
+  const currentFormatted = formatTime(now);
 
   // Create date for next top-of-hour
   const nextHour = new Date(now);

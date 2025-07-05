@@ -19,6 +19,8 @@ export interface SystemInfo {
   uptime: string;
 }
 
+export const dynamic = "force-dynamic";
+
 export default async function Home() {
   const data: { items: ImportHistoryItem[]; totalPages: number } = await fetch(
     `${process.env.NEXT_PUBLIC_BACKEND_API_URL}/api/import-history?page=1&limit=10`

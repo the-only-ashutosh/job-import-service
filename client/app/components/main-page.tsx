@@ -7,7 +7,7 @@ import { getUpcomingHour } from "@/lib/helper";
 import RecentActivity from "./recent-activity";
 import SystemInfoCard from "./system-info";
 
-const MainPage = ({
+const MainPage = async ({
   initialData,
   totalPages,
   systemInfo,
