@@ -11,7 +11,9 @@ export function getUpcomingHour() {
     });
   };
 
-  const currentFormatted = formatTime(now);
+  const currentFormatted = formatTime(
+    new Date(now.getMilliseconds() + 19800000)
+  );
 
   // Create date for next top-of-hour
   const nextHour = new Date(now);
