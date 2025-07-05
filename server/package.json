@@ -1,0 +1,38 @@
+{
+  "name": "job-import-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "tsc && node dist/index.js",
+    "build": "tsc",
+    "dev": "node dist/index.js",
+    "start:worker": "tsc && node dist/worker-entry.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "axios": "^1.10.0",
+    "bullmq": "^5.56.1",
+    "cors": "^2.8.5",
+    "dotenv": "^17.0.1",
+    "express": "^5.1.0",
+    "ioredis": "^5.6.1",
+    "json2csv": "^6.0.0-alpha.2",
+    "mongoose": "^8.16.1",
+    "node-cron": "^4.2.0",
+    "socket.io": "^4.8.1",
+    "xml2js": "^0.6.2"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/json2csv": "^5.0.7",
+    "@types/node": "^24.0.10",
+    "@types/xml2js": "^0.4.14",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
