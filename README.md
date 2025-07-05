@@ -13,7 +13,7 @@ This is a full-stack job import system that:
 /client → Next.js frontend app (deployed on Vercel)
 /server → Node.js Express API + worker (deployed on Cloud Run)
 /README.md → This guide
-/docs/architecture.md → Architecture diagrams and design notes
+/docs/[architecture.md](https://github.com/the-only-ashutosh/job-import-service/blob/main/docs/architecture.md) → Architecture diagrams and design notes
 
 ## 🚀 Deployment Guide
 

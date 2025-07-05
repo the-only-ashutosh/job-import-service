@@ -81,7 +81,3 @@ This architecture ensures:
 - Minimal operational overhead with serverless services.
 - Flexible, scalable, and maintainable design.
 - Clear separation of concerns between frontend, API, and worker processes.
-
-```
-
-```
